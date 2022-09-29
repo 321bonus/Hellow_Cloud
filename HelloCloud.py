@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Hello RUK-COM!</h1>'
+    return '<h1>Hello RUK-COM is Great! </h1>'
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
@@ -16,5 +16,5 @@ def home():
 
 if __name__ == '__main__':
     app.debug = True
-    
+
     app.run(host='0.0.0.0', port=80)
