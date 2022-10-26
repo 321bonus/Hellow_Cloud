@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="ccffff">
+    <table border="4" width="50%" align="center">
+            <th>student-id</th>
+            <th>student-f_name</th>
+            <th>student-l_name</th>
+            <th>subject-id</th>
+            <th>subject-name</th>
+            <th>grade</th>
+            <th>teacher-f_name</th>
+            <th>teacher-l_name</th>
+        </tr>
+        {% for row in test %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[3] }}</td>
+          <td>{{ row[4] }}</td>
+          <td>{{ row[5] }}</td>
+          <td>{{ row[6] }}</td>
+          <td>{{ row[7] }}</td>
+        </tr>
+      {% endfor %}
+      </table>
+</body>
+</html>
