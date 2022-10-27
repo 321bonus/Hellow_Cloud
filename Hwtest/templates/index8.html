@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        table, th, td {
+          border:1px solid rgb(236, 176, 45);
+        }
+        </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX7</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Bootstrap there -->
+    <link href="{{ url_for('static',filename='css/bootstrap.theme.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='css/theme.css') }}" rel="stylesheet">
+</head>
+<body bgcolor="ccffff">
+    <div class="container theme-showcase" role="main">
+        <div class="page-header">
+            <table border="4" width="50%" >
+                <tr>
+                    <th>student-id</th>
+                    <th>student first name</th>
+                    <th>student last name</th>
+                    <th>subject id</th>
+                    <th>grade</th>
+                    <th>subject name</th>
+                    <th>teacher first name</th>
+                    <th>teacher last name</th>
+                </tr>
+                {% for r in result %}
+                <tr>
+                    <td>{{ r.student_id }}</td>
+                    <td>{{ r.f_name }}</td>
+                    <td>{{ r.l_name }}</td>
+                    <td>{{ r.sub_id }}</td>
+                    <td>{{ r.grade}}</td>
+                    <td>{{ r.subject_name}}</td>
+                    <td>{{ r.tf_name}}</td>
+                    <td>{{ r.tl_name}}</td>
+                </tr>
+                {% endfor %}
+            </Table>
+        </div>
+    </div> <!--/container -->
+</body>
+</html>
